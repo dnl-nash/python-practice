@@ -1,4 +1,5 @@
 from random import randint as ri
+from sys import exit
 calls=[]
 ltrs=['b','i','n','g','o']
 while 1:
@@ -23,7 +24,10 @@ while 1:
     print(callltr)
     print(callnum)
     calls.append(str(callltr)+"\n"+str(callnum))
-    cmd=input()
+    try:
+        cmd=input()
+    except KeyboardInterrupt:
+        exit(0)
     match(cmd):
         case "c":
             calls.clear()

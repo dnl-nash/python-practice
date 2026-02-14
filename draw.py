@@ -41,4 +41,4 @@ while 1:
         color=(random.choice(range(0,255)),random.choice(range(0,255)),random.choice(range(0,255)))
         s.fill(color)
         pygame.display.flip()
-        time.sleep((surfaces.index(s)+1)/float(num))
+        time.sleep((surfaces.index(s)+1)/float(speed))

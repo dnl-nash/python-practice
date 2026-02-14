@@ -2,6 +2,7 @@ import pygame
 import argparse
 import random
 import time
+import sys
 pygame.display.init()
 parser=argparse.ArgumentParser()
 parser.add_argument("-d","--desktop")
@@ -39,5 +40,5 @@ while 1:
     for s in surfaces:
         color=(random.choice(range(0,255)),random.choice(range(0,255)),random.choice(range(0,255)))
         s.fill(color)
-    pygame.display.flip()
-    time.sleep(speed)
+        pygame.display.flip()
+        time.sleep((surfaces.index(s)+1)/float(num))
